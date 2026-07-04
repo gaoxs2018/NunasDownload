@@ -1,0 +1,26 @@
+# WordPress plugin build artifacts
+*.zip
+
+# Reasonix IDE config
+.reasonix/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+log/
+
+# Composer
+vendor/
+composer.lock
+
+# Node
+node_modules/
+package-lock.json

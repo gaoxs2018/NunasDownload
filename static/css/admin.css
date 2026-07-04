@@ -1,0 +1,314 @@
+/* 后台公共样式 */
+#nunas_download_meta_box .inside { padding: 0 12px 12px; }
+#wp-nunas_download_content-editor-container {
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* 开关组件 */
+.nd-switch {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 8px;
+}
+.nd-switch input { display: none; }
+.nd-switch-bar {
+    width: 40px;
+    height: 22px;
+    background: #dcdfe6;
+    border-radius: 22px;
+    position: relative;
+    transition: background .3s;
+}
+.nd-switch-bar::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left .3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+.nd-switch input:checked + .nd-switch-bar { background: #409EFF; }
+.nd-switch input:checked + .nd-switch-bar::after { left: 20px; }
+
+/* 文章编辑页 Meta Box */
+.nd-meta-box-wrap {
+    display: flex;
+    gap: 16px;
+    padding: 6px 0;
+}
+.nd-meta-box-left {
+    width: 40%;
+    background: #fafbfc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.nd-meta-box-left #wp-nunas_download_content-wrap {
+    margin: 0;
+}
+.nd-meta-box-left .wp-editor-container {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.nd-meta-box-right {
+    flex: 1;
+    background: #fafbfc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.nd-mb-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303133;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebeef5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nd-mb-add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 14px;
+    background: #fff;
+    color: #409EFF;
+    border: 1px solid #409EFF;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all .2s;
+}
+.nd-mb-add-btn:hover {
+    background: #ecf5ff;
+    color: #409EFF;
+}
+.nd-mb-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.nd-mb-row label {
+    width: 72px;
+    color: #606266;
+    font-size: 13px;
+    text-align: right;
+    flex-shrink: 0;
+}
+.nd-mb-row-combo label {
+    width: auto;
+    min-width: 50px;
+    padding-right: 4px;
+}
+.nd-mb-row-combo .nd-key-label {
+    min-width: 40px;
+    margin-left: 6px;
+}
+.nd-mb-row-combo .nd-url-input {
+    flex: 1;
+    min-width: 0;
+}
+.nd-mb-row-combo .nd-key-input {
+    flex: 0 0 100px;
+}
+.nd-mb-row input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #DCDFE6;
+    border-radius: 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.nd-mb-row input[type="text"]:focus {
+    border-color: #409EFF;
+    outline: none;
+}
+.nd-mb-topbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid #ebeef5;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+.nd-mb-topbar .nd-mb-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #606266;
+}
+.nd-mb-topbar .nd-mb-field input[type="text"] {
+    min-width: 240px;
+    padding: 8px 12px;
+    border: 1px solid #DCDFE6;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #f7f8fa;
+    color: #606266;
+}
+.nd-mb-topbar .nd-mb-field input[type="text"]:focus {
+    background: #fff;
+    border-color: #409EFF;
+    outline: none;
+}
+.nd-mb-topbar .nd-mb-field .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #909399;
+}
+.nd-download-list {
+    border: 1px solid #ebeef5;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #f7f8fa;
+    margin-bottom: 8px;
+}
+.nd-download-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.nd-disk-picker {
+    position: relative;
+    user-select: none;
+}
+.nd-disk-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #303133;
+    transition: border-color .2s, box-shadow .2s;
+    min-width: 100px;
+}
+.nd-disk-trigger:hover {
+    border-color: #409EFF;
+}
+.nd-disk-trigger:active {
+    box-shadow: 0 0 0 3px rgba(64,158,255,.12);
+}
+.nd-disk-label {
+    flex: 1;
+    line-height: 1.4;
+}
+.nd-disk-arrow {
+    font-size: 10px;
+    color: #909399;
+    transition: transform .2s;
+}
+.nd-disk-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 4px;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    z-index: 100;
+    padding: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.nd-disk-option {
+    padding: 7px 12px;
+    font-size: 13px;
+    color: #303133;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background .12s;
+}
+.nd-disk-option:hover {
+    background: #f0f5ff;
+    color: #409EFF;
+}
+.nd-disk-option.active {
+    background: #ecf5ff;
+    color: #409EFF;
+    font-weight: 600;
+}
+.nd-download-item-detail {
+}
+.nd-download-item-detail.nd-compact .nd-mb-row {
+    margin-bottom: 6px;
+}
+.nd-download-item-detail.nd-compact .nd-mb-row:last-child {
+    margin-bottom: 0;
+}
+.nd-mb-del {
+    color: #f56c6c;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background .15s;
+}
+.nd-mb-del:hover {
+    color: #ff7875;
+    background: rgba(245,108,108,.08);
+}
+.nd-mb-del .dashicons {
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+}
+
+/* 后台顶部菜单图标占位 */
+.dashicons-icon-nunas-download:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237090e0'><path d='M12 3v10.59l3.3-3.3 1.4 1.42L12 17.41l-4.7-4.7 1.4-1.42 3.3 3.3V3h2zm-7 16h14v2H5v-2z'/></svg>");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#nunas_download_meta_box .postbox-header .ui-sortable-handle .nunas_download_meta_box-title:before {
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23409EFF'><path d='M12 3v10.59l3.3-3.3 1.4 1.42L12 17.41l-4.7-4.7 1.4-1.42 3.3 3.3V3h2zm-7 16h14v2H5v-2z'/></svg>");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#nunas_download_meta_box .inside {
+    padding: 12px;
+    margin: 0;
+}

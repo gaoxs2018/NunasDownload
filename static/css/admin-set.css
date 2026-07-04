@@ -1,0 +1,346 @@
+/* NunasDownload 后台设置页 - 清爽简洁风格 */
+
+.nd-settings {
+    max-width: 1100px;
+    margin-top: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 头部 */
+.nd-settings-header {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.nd-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nd-logo {
+    width: 24px;
+    height: 24px;
+    color: #409EFF;
+    font-size: 24px;
+}
+.nd-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+.nd-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 主体布局 */
+.nd-settings-body {
+    display: flex;
+    gap: 12px;
+}
+.nd-settings-main {
+    flex: 1;
+    min-width: 0;
+}
+.nd-settings-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+/* 区块 */
+.nd-section {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.nd-section:last-child { margin-bottom: 0; }
+.nd-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* 表单行 */
+.nd-field-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 16px;
+}
+.nd-field-row:last-child { margin-bottom: 0; }
+.nd-field-label {
+    width: 80px;
+    flex-shrink: 0;
+    color: #374151;
+    font-size: 13px;
+    line-height: 32px;
+    font-weight: 500;
+}
+.nd-field-control {
+    flex: 1;
+    min-width: 0;
+}
+.nd-field-tip {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+/* 输入框 */
+.nd-field-control input[type="text"],
+.nd-field-control input[type="url"],
+.nd-field-control input[type="number"],
+.nd-field-control textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #374151;
+    background: #fff;
+    transition: border-color .15s, box-shadow .15s;
+}
+.nd-field-control input[type="text"]:focus,
+.nd-field-control input[type="url"]:focus,
+.nd-field-control input[type="number"]:focus,
+.nd-field-control textarea:focus {
+    border-color: #409EFF;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(64, 158, 255, .1);
+}
+.nd-field-control textarea {
+    min-height: 52px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* 边框圆角输入 */
+.nd-radius-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nd-radius-wrap input[type="number"] {
+    width: 80px;
+}
+.nd-unit {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* 开关 */
+.nd-switch {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.nd-switch input { display: none; }
+.nd-switch-bar {
+    width: 36px;
+    height: 20px;
+    background: #d1d5db;
+    border-radius: 20px;
+    position: relative;
+    transition: background .2s;
+}
+.nd-switch-bar::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left .2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+.nd-switch input:checked + .nd-switch-bar { background: #409EFF; }
+.nd-switch input:checked + .nd-switch-bar::after { left: 18px; }
+
+/* 颜色选择器 */
+.nd-color-picker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nd-color-picker input[type="color"] {
+    width: 36px;
+    height: 32px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 2px;
+    background: #fff;
+}
+.nd-color-picker input[type="text"] {
+    width: 110px;
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #374151;
+}
+
+/* 按钮 */
+.nd-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .15s;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.nd-btn-primary {
+    background: #409EFF;
+    color: #fff;
+    border-color: #409EFF;
+}
+.nd-btn-primary:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+}
+.nd-btn-primary:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+.nd-btn-outline {
+    background: #fff;
+    color: #409EFF;
+    border-color: #409EFF;
+}
+.nd-btn-outline:hover {
+    background: #ecf5ff;
+}
+.nd-btn-text {
+    background: transparent;
+    color: #6b7280;
+    border-color: transparent;
+    padding: 6px 10px;
+}
+.nd-btn-text:hover {
+    color: #409EFF;
+}
+
+/* 二维码区域 */
+.nd-qrcode-section {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.nd-qrcode-preview {
+    width: 96px;
+    height: 96px;
+    border: 1px dashed #d1d5db;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f9fafb;
+    color: #9ca3af;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+.nd-qrcode-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nd-qrcode-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nd-qrcode-right input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #374151;
+    box-sizing: border-box;
+    transition: border-color .15s, box-shadow .15s;
+}
+.nd-qrcode-right input[type="text"]:focus {
+    border-color: #409EFF;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(64, 158, 255, .1);
+}
+.nd-qrcode-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* 关于插件 */
+.nd-about-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #f3f4f6;
+}
+.nd-about-item:last-child { border-bottom: none; }
+.nd-about-label {
+    color: #6b7280;
+}
+.nd-about-value {
+    color: #374151;
+    font-weight: 500;
+}
+.nd-about-link {
+    color: #409EFF;
+    text-decoration: none;
+}
+.nd-about-link:hover {
+    text-decoration: underline;
+}
+
+/* 响应式 */
+@media (max-width: 960px) {
+    .nd-settings-body {
+        flex-direction: column;
+    }
+    .nd-settings-sidebar {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .nd-field-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .nd-field-label {
+        width: 100%;
+        line-height: 1.5;
+    }
+    .nd-qrcode-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nd-qrcode-right {
+        width: 100%;
+    }
+}

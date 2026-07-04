@@ -1,0 +1,150 @@
+.nunas-download-warp {
+    --theme-color: #409EFF;
+    --border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--theme-color);
+    border-radius: var(--border-radius);
+}
+.nunas-download-warp a {
+    text-decoration: none !important;
+}
+.nunas-download-warp img {
+    box-shadow: none !important;
+}
+.nunas-download-content {
+    padding: 6px 4px 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    border-bottom: 1px dashed #f0f0f0;
+    margin-bottom: 10px;
+}
+.nunas-download-warp .nunas-download-url-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.nunas-download-warp .download-title-left,
+.nunas-download-warp .download-title-2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--theme-color);
+    margin-bottom: 10px;
+}
+.nunas-download-warp .download-title-right {
+    background: var(--theme-color);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: var(--border-radius);
+}
+.nunas-download-warp .download-title-right a {
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nunas-download-warp .download-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nunas-download-warp .download-title-2 {
+    font-size: 18px;
+}
+.nunas-download-warp .nunas-download-item-header,
+.nunas-download-warp .nunas-download-item-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.nunas-download-warp .nunas-download-item {
+    border: 1px solid #f0f0f0;
+    border-radius: var(--border-radius);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    transition: .3s;
+}
+.nunas-download-warp .nunas-download-item:hover {
+    top: -5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+.nunas-download-warp .nunas-download-netdisk-icon {
+    width: 36px !important;
+    height: 36px !important;
+}
+.nunas-download-warp .nunas-download-item-header {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.nunas-download-warp .nunas-download-item-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nunas-download-warp .nunas-download-item-header .header-left svg {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+.nunas-download-warp .nunas-download-item-header svg.open-link-icon {
+    width: 16px;
+    height: 16px;
+}
+.nunas-download-warp .nunas-download-item-body {
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: #f3f3f3;
+}
+.nunas-download-warp .nunas-download-item-body .netdisk-key {
+    color: var(--theme-color);
+}
+.nunas-download-warp .nunas-download-item-body .resource-name {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.nunas-download-warp .nunas-download-item-body .copy-key {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+.nunas-download-warp .nunas-download-footer {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nunas-download-warp .nunas-download-footer .copyright-str {
+    font-size: 12px;
+    color: #999;
+}
+.nunas-download-warp .nunas-download-footer .copyright-right svg {
+    height: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+@media (max-width: 992px) {
+    .nunas-download-warp .nunas-download-url-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+@media (max-width: 576px) {
+    .nunas-download-warp .nunas-download-url-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 480px) {
+    .nunas-download-warp .nunas-download-url-list {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
