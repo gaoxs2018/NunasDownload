@@ -52,7 +52,7 @@ class Options
         $data['theme_color'] = '#409EFF';
         $data['border_radius'] = '8';
         $data['complaint_url'] = '';
-        $data['copyright_str'] = '资源下载由 NunasDownload 插件提供';
+        $data['copyright_str'] = '本站所有资源均来源于网络，仅供学习使用，请下载后24小时内删除';
         return $data;
     }
 
