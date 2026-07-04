@@ -21,7 +21,7 @@ class Config
     {
         self::$plugin_name = 'nunas_download';
         self::$plugin_version = filemtime(__FILE__);
-        self::$plugin_version_name = '1.1.0';
+        self::$plugin_version_name = '1.1.1';
         self::$set_name = 'nunas_download_set';
 
         self::$plugin_dir = dirname(__DIR__);

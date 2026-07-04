@@ -8,7 +8,6 @@
     <div class="nunas-download-content">
         {content}
     </div>
-    <div class="download-title-2">下载地址</div>
     <div class="nunas-download-url-list">
         {download_data}
     </div>
