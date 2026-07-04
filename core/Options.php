@@ -47,7 +47,7 @@ class Options
 
     private static function getDefaultOptions()
     {
-        $data['open'] = false;
+        $data['open'] = true;
         $data['qrcode_url'] = '';
         $data['theme_color'] = '#409EFF';
         $data['border_radius'] = '8';

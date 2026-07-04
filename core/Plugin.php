@@ -9,7 +9,7 @@ class Plugin
         \add_action('admin_menu', [static::class, 'regMenu']);
         \add_action('add_meta_boxes', [static::class, 'addMetaBox']);
         \add_action('save_post', [static::class, 'saveMetaBox']);
-        \add_filter('the_content', [static::class, 'addDownloadWrap']);
+        \add_filter('the_content', [static::class, 'addDownloadWrap'], 9999);
         \add_action('wp_footer', [static::class, 'handleFooter']);
     }
 
